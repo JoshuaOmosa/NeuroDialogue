@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dvy5eysqccj3h"]
+
+[ext_resource type="Script" uid="uid://l4lhwcaqtxae" path="res://src/ui_controller.gd" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://kptulyyonmek" path="res://src/npc_brain.gd" id="2_r0du0"]
+
+[node name="Main" type="Control" unique_id=707816933]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uu6xs")
+
+[node name="NPCBrain" type="Node" parent="." unique_id=739553202]
+script = ExtResource("2_r0du0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1276272660]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 23.0
+offset_right = 490.0
+offset_bottom = 196.0
+
+[node name="MoodLabel" type="Label" parent="VBoxContainer" unique_id=1926477093]
+layout_mode = 2
+
+[node name="gift" type="Button" parent="VBoxContainer" unique_id=803625257]
+layout_mode = 2
+text = "Send Gift"
+
+[node name="Insult" type="Button" parent="VBoxContainer" unique_id=1135794781]
+layout_mode = 2
+focus_mode = 0
+text = "Send Insult"
+
+[connection signal="pressed" from="VBoxContainer/gift" to="." method="_on_gift_pressed"]
+[connection signal="pressed" from="VBoxContainer/Insult" to="." method="_on_insult_pressed"]

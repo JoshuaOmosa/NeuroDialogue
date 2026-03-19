@@ -1,2 +1,11 @@
-user_data/
+# Godot 4 specific ignores 
+.godot/
 *.tmp
+export_presets.cfg
+
+# Metadata and Local Data
+user_data/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
