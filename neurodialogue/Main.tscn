@@ -30,6 +30,7 @@ layout_mode = 2
 
 [node name="gift" type="Button" parent="VBoxContainer" unique_id=803625257]
 layout_mode = 2
+focus_mode = 0
 text = "Send Gift"
 
 [node name="Insult" type="Button" parent="VBoxContainer" unique_id=1135794781]
